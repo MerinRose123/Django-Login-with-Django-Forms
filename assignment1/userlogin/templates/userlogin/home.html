@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" type= "text/css" href = "{% static 'css/style.css' %}"/>
+    <title>Title</title>
+</head>
+<body>
+    <p>
+    <h1><center>Details of the Users</center></h1>
+        {% for data in userlogin %}
+        <table border="1" >
+            <tr colspan="2">
+                <td>username: </td>
+                <td><a href="../editpage/" >{{ data.username}}</a></td>
+                <td>firstname: </td>
+                <td>{{ data.firstname}}</td>
+            </tr>
+        </table>
+        {% endfor %}
+    </p>
+</body>
+</html>

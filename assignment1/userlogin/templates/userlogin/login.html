@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel = "stylesheet" type= "text/css" href = "{% static 'css/style.css' %}"/>
+</head>
+<body>
+<img src= "{% static 'images/logo.png' %}" alt="image not available"/>
+    <p><centre>Login page .....!!</centre></p>
+    <form method="POST" action="../loginview/" >
+        {% csrf_token %}
+        <table border="1">
+             {{ form.as_table }}
+        </table>
+    <input id="submit" type="submit" value="Submit" />
+</form>
+</body>
+</html>

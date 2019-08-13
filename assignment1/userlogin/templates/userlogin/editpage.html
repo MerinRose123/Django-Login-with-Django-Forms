@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" type= "text/css" href = "{% static 'css/style.css' %}"/>
+    <title>Title</title>
+</head>
+<body>
+
+    <h2>Edit Your Details</h2>
+    <form method="POST" action="../edit/" >
+        {% csrf_token %}
+        <table border="1">
+             {{ form.as_table }}
+        </table>
+         <input id="submit" type="submit" value="change details" />
+    </form>
+</body>
+</html>
